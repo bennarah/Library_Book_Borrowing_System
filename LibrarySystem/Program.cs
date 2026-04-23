@@ -1,4 +1,5 @@
 using LibrarySystem.Data;
+using LibrarySystem.Middleware;
 using LibrarySystem.Repositories;
 using LibrarySystem.Services;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
