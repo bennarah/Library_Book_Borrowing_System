@@ -2472,19 +2472,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/bassy/.nuget/packages/": {}
+    "/Users/kaylawitecki/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bassy/Downloads/CPSC449/Library_Book_Borrowing_System/LibrarySystem/LibrarySystem.csproj",
+      "projectUniqueName": "/Users/kaylawitecki/Downloads/Library_Book_Borrowing_System/LibrarySystem/LibrarySystem.csproj",
       "projectName": "LibrarySystem",
-      "projectPath": "/Users/bassy/Downloads/CPSC449/Library_Book_Borrowing_System/LibrarySystem/LibrarySystem.csproj",
-      "packagesPath": "/Users/bassy/.nuget/packages/",
-      "outputPath": "/Users/bassy/Downloads/CPSC449/Library_Book_Borrowing_System/LibrarySystem/obj/",
+      "projectPath": "/Users/kaylawitecki/Downloads/Library_Book_Borrowing_System/LibrarySystem/LibrarySystem.csproj",
+      "packagesPath": "/Users/kaylawitecki/.nuget/packages/",
+      "outputPath": "/Users/kaylawitecki/Downloads/Library_Book_Borrowing_System/LibrarySystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bassy/.nuget/NuGet/NuGet.Config"
+        "/Users/kaylawitecki/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"

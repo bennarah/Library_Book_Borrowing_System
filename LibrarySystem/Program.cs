@@ -21,6 +21,10 @@ builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
 
+// Register Members
+builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+builder.Services.AddScoped<IMemberService, MemberService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
