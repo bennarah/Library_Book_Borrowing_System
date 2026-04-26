@@ -26,11 +26,12 @@ namespace LibrarySystem.Data
                 .Property(b => b.ISBN)
                 .IsRequired();
 
-            // Use RowVersion for concurrency control
+            // Optimistic concurrency token — EF appends WHERE RowVersion = @original on UPDATE.
+            // IsConcurrencyToken (not IsRowVersion) because SQLite doesn't auto-generate the value;
+            // we increment it manually in the service before each save.
             modelBuilder.Entity<Book>()
                 .Property(b => b.RowVersion)
-                .IsRowVersion()
-                .HasColumnType("INTEGER");
+                .IsConcurrencyToken();
 
             // Member constraints
             modelBuilder.Entity<Member>()

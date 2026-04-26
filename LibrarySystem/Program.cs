@@ -25,6 +25,10 @@ builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IMemberRepository, MemberRepository>();
 builder.Services.AddScoped<IMemberService, MemberService>();
 
+// Register Borrows
+builder.Services.AddScoped<IBorrowRecordRepository, BorrowRecordRepository>();
+builder.Services.AddScoped<IBorrowService, BorrowService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

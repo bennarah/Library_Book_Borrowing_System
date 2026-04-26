@@ -2,8 +2,7 @@ using LibrarySystem.Models;
 
 namespace LibrarySystem.Repositories
 {
-    public interface IBorrowRecordRepository    
-
+    public interface IBorrowRecordRepository
     {
         Task<List<BorrowRecord>> GetAllAsync();
         Task<BorrowRecord?> GetByIdAsync(int id);

@@ -36,7 +36,6 @@ namespace LibrarySystem.Migrations
 
                     b.Property<uint>("RowVersion")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Title")

@@ -22,7 +22,7 @@ namespace LibrarySystem.Migrations
                     ISBN = table.Column<string>(type: "TEXT", nullable: false),
                     TotalCopies = table.Column<int>(type: "INTEGER", nullable: false),
                     AvailableCopies = table.Column<int>(type: "INTEGER", nullable: false),
-                    RowVersion = table.Column<uint>(type: "INTEGER", rowVersion: true, nullable: false)
+                    RowVersion = table.Column<uint>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibrarySystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260423223417_InitialCreate")]
+    [Migration("20260426041158_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -39,7 +39,6 @@ namespace LibrarySystem.Migrations
 
                     b.Property<uint>("RowVersion")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Title")

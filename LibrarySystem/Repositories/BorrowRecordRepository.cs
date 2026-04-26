@@ -15,12 +15,18 @@ namespace LibrarySystem.Repositories
 
         public async Task<List<BorrowRecord>> GetAllAsync()
         {
-            return await _context.BorrowRecords.ToListAsync();
+            return await _context.BorrowRecords
+                .Include(br => br.Book)
+                .Include(br => br.Member)
+                .ToListAsync();
         }
 
         public async Task<BorrowRecord?> GetByIdAsync(int id)
         {
-            return await _context.BorrowRecords.FindAsync(id);
+            return await _context.BorrowRecords
+                .Include(br => br.Book)
+                .Include(br => br.Member)
+                .FirstOrDefaultAsync(br => br.Id == id);
         }
 
         public async Task<BorrowRecord> CreateAsync(BorrowRecord borrowRecord)
@@ -39,7 +45,7 @@ namespace LibrarySystem.Repositories
             borrowRecord.BookId = updated.BookId;
             borrowRecord.BorrowDate = updated.BorrowDate;
             borrowRecord.ReturnDate = updated.ReturnDate;
-            borrowRecord.ReturnDate = updated.ReturnDate;
+            borrowRecord.Status = updated.Status;
 
             await _context.SaveChangesAsync();
             return borrowRecord;
